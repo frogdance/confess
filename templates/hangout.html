@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% load static %}
+{% block title %}
+<title id="titleWeb">Question</title>
+{% endblock %}
+{% block addin %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spinload.css' %}">
+    <link rel="stylesheet" type="text/css" href=" https://fonts.googleapis.com/css?family=Pacifico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% endblock %}
+{% block body %}
+<body>
+    <div class="wrapper">
+        <!-- Preloader -->
+        <div id="preloader">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <div id="bg"></div>
+        <div class="content">
+            <header>
+                <h2 id="title"></h2>
+                <h4 id="desc"></h4>
+            </header>
+            <audio id="base" src="{% static 'sound/base1.mp3' %}" style="display:none"></audio>
+            <button id="yes" type="button" class="btn btn-danger btn-lg"> </button>
+            <button id="no" type="button" class="btn btn-info btn-lg"></button>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/sweetalert.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/config.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+{% endblock %}

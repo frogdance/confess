@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% load static %}
+{% block title %}
+<title id="titleWeb">Gifts</title>
+{% endblock %}
+{% block addin %}
+    <link rel="stylesheet" href="{% static 'css/spliting.css' %}">
+    <link rel="stylesheet" href="{% static 'css/spliting2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cake.css' %}">
+{% endblock %}
+{% block body %}
+<body style="  background: #34E1FF;
+font-family: 'Fredoka One', cursive;
+overflow-x: hidden;">
+    <!-- partial:index.partial.html -->
+    <div style="display: flex; justify-content: center;">
+        <img src="{% static 'img/logi.gif' %}" width="100" height="100">
+    </div>
+    
+    <div class="container">
+        <div class="text" data-splitting="">Hello Cậu !!</div>
+        <div class="presents">
+            <div class="present orange" onclick="orangePresent()">
+            <div class="lid"></div>
+            <div class="box"></div>
+            <div class="bow"></div>
+            <div class="ribbon"></div>
+            </div>
+            <div class="present blue" onclick="bluePresent()">
+            <div class="lid"></div>
+            <div class="box"></div>
+            <div class="bow"></div>
+            <div class="ribbon"></div>
+            </div>
+            <div class="present green" onclick="greenPresent()">
+            <div class="lid"></div>
+            <div class="box"></div>
+            <div class="bow"></div>
+            <div class="ribbon"></div>
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src="{% static 'js/mojs2.js' %}"></script>
+    <script src="{% static 'js/mojs.js' %}"></script>
+    <script src="{% static 'js/spliting.js' %}"></script>
+    <script src="{% static 'js/cake.js' %}"></script>
+    <script>
+
+        function orangePresent() {
+            window.location = '../hangout';
+        }
+
+        function bluePresent() {
+            window.location = '../thinking';
+        }
+
+        async function greenPresent() {
+            await fetch('/redirectfb');
+            window.location = 'https://www.facebook.com/';
+        }
+    </script>
+     
+</body>
+{% endblock %}
